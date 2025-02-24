@@ -3,6 +3,9 @@ package com.example.animations2024
 import android.os.Bundle
 import android.animation.ObjectAnimator
 import android.animation.AnimatorSet
+import android.content.Intent
+import android.os.Handler
+import android.os.Looper
 
 import android.view.animation.AnimationSet
 import android.view.animation.AnimationUtils
@@ -38,5 +41,12 @@ class MainActivity : AppCompatActivity() {
 
         animationSet.fillAfter = true
         binding.bola.startAnimation(animationSet)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, SplashScreen::class.java)
+            startActivity(intent)
+            finish()
+            // Time in milliseconds
+        }, animation6.startOffset + animation6.duration)
         }
     }

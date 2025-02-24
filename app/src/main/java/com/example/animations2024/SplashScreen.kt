@@ -24,7 +24,7 @@ class SplashScreen : AppCompatActivity() {
                 startActivity(intent)
                 finish()
                 // Time in milliseconds
-            }, 2100)
+            }, 0)
         }
         // Splashscreen delay
 
